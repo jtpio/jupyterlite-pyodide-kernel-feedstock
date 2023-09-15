@@ -1,5 +1,5 @@
-{% set jupyterlab_version = ">=3.5.3,<3.6" %}
 {% set version = "0.1.2" %}
+{% set js_version = version.replace("a", "-alpha.").replace("b", "-beta.").replace("rc", "-rc.") %}
 {% set jupyterlab_version = ">=3.5.3,<3.6" %}
 
 package:
@@ -37,7 +37,7 @@ test:
     - jupyter-piplite --help
     - jupyter labextension list
     - jupyter labextension list 1>labextensions 2>&1
-    - grep -iE "@jupyterlite/pyodide-kernel-extension.*v{{ version.replace('.', '\.') }}.*OK" labextensions
+    - grep -iE "@jupyterlite/pyodide-kernel-extension.*v{{ js_version.replace('.', '\.') }}.*OK" labextensions
     - jupyter lite build
     - grep -iE "pyodide-kernel-extension" _output/jupyter-lite.json
   requires:
