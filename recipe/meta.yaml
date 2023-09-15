@@ -1,4 +1,5 @@
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
+{% set js_version = version.replace("a", "-alpha.").replace("b", "-beta.").replace("rc", "-rc.") %}
 {% set jupyterlab_version = ">=3.5.3,<3.6" %}
 
 package:
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyterlite-pyodide-kernel/jupyterlite_pyodide_kernel-{{ version }}.tar.gz
-  sha256: f2debad284e1d06f7f793ad0f857bdc631453f27027e3859fb65b622ed2d9f10
+  sha256: c5af866330e653c804c7cb86b535cfcf829fcd43b39c6e7fc4f45404fab88751
 
 build:
   noarch: python
@@ -36,7 +37,7 @@ test:
     - jupyter-piplite --help
     - jupyter labextension list
     - jupyter labextension list 1>labextensions 2>&1
-    - grep -iE "@jupyterlite/pyodide-kernel-extension.*v{{ version.replace('.', '\.') }}.*OK" labextensions
+    - grep -iE "@jupyterlite/pyodide-kernel-extension.*v{{ js_version.replace('.', '\.') }}.*OK" labextensions
     - jupyter lite build
     - grep -iE "pyodide-kernel-extension" _output/jupyter-lite.json
   requires:
