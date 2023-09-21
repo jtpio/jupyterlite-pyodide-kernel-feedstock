@@ -1,4 +1,4 @@
-{% set version = "0.2.0a0" %}
+{% set version = "0.2.0a1" %}
 {% set js_version = version.replace("a", "-alpha.").replace("b", "-beta.").replace("rc", "-rc.") %}
 {% set jupyterlab_version = ">=4.0.5,<5.0.0a" %}
 
