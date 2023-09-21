@@ -1,4 +1,4 @@
-channel_targets:
-  - conda-forge jupyterlite_pyodide_kernel_alpha
 channel_sources:
   - conda-forge/label/jupyterlite_core_alpha,conda-forge
+channel_targets:
+  - conda-forge jupyterlite_pyodide_kernel_alpha
