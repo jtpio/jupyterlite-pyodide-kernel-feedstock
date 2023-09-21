@@ -1,6 +1,6 @@
-{% set version = "0.1.2" %}
+{% set version = "0.2.0a0" %}
 {% set js_version = version.replace("a", "-alpha.").replace("b", "-beta.").replace("rc", "-rc.") %}
-{% set jupyterlab_version = ">=3.5.3,<3.6" %}
+{% set jupyterlab_version = ">=4.0.5,<5.0.0a" %}
 
 package:
   name: jupyterlite-pyodide-kernel
@@ -24,7 +24,7 @@ requirements:
     - pip
     - python >=3.8
   run:
-    - jupyterlite-core >=0.1.2,<0.2.0
+    - jupyterlite-core >=0.2.0a0,<0.3.0
     - pkginfo
     - python >=3.8
 
