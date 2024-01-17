@@ -1,4 +1,5 @@
-{% set version = "0.2.0" %}
+{% set jupyterlab_version = ">=4.0.7,<5.0.0a" %}
+{% set version = "0.2.1" %}
 {% set js_version = version.replace("a", "-alpha.").replace("b", "-beta.").replace("rc", "-rc.") %}
 {% set jupyterlab_version = ">=4.0.7,<5.0.0a" %}
 
@@ -8,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyterlite-pyodide-kernel/jupyterlite_pyodide_kernel-{{ version }}.tar.gz
-  sha256: 5979ffd9e4eeb8af145e14a900952a2e8ce3633158b385b9444a8238520f3482
+  sha256: c33c975328723732aaaa347cdf3a38d2ea33fc30d7cea815b501f8176a8272a2
 
 build:
   noarch: python
