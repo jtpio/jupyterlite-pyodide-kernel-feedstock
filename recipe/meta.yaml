@@ -1,6 +1,6 @@
-{% set version = "0.2.3" %}
+{% set version = "0.3.0" %}
 {% set js_version = version.replace("a", "-alpha.").replace("b", "-beta.").replace("rc", "-rc.") %}
-{% set jupyterlab_version = ">=4.0.7,<5.0.0a" %}
+{% set jupyterlab_version = ">=4.1.1,<4.2.0" %}
 
 package:
   name: jupyterlite-pyodide-kernel
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyterlite-pyodide-kernel/jupyterlite_pyodide_kernel-{{ version }}.tar.gz
-  sha256: 5fef56d29d61a22b8ef2dcd123ae4c79bd5187547b2728e7f03f236109fa200b
+  sha256: 679880af080c254141f7d013e3c1161fef924d9f75e8f97da8fde355f5a97ed4
 
 build:
   noarch: python
@@ -24,13 +24,17 @@ requirements:
     - pip
     - python >=3.8
   run:
-    - jupyterlite-core >=0.2.0,<0.3.0
+    - jupyterlite-core >=0.3.0,<0.4.0
     - pkginfo
     - python >=3.8
 
 test:
   imports:
     - jupyterlite_pyodide_kernel
+  requires:
+    - jupyterlab {{ jupyterlab_version }}
+    - m2-grep  # [win]
+    - pip
   commands:
     - pip check
     - jupyter piplite --version
@@ -40,10 +44,6 @@ test:
     - grep -iE "@jupyterlite/pyodide-kernel-extension.*v{{ js_version.replace('.', '\.') }}.*OK" labextensions
     - jupyter lite build
     - grep -iE "pyodide-kernel-extension" _output/jupyter-lite.json
-  requires:
-    - jupyterlab {{ jupyterlab_version }}
-    - m2-grep  # [win]
-    - pip
 
 about:
   home: https://github.com/jupyterlite/pyodide-kernel
