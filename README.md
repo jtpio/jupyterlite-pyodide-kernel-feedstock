@@ -34,14 +34,14 @@ Current release info
 Installing jupyterlite-pyodide-kernel
 =====================================
 
-Installing `jupyterlite-pyodide-kernel` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `jupyterlite-pyodide-kernel` from the `conda-forge/label/jupyterlite_pyodide_kernel_alpha` channel can be achieved by adding `conda-forge/label/jupyterlite_pyodide_kernel_alpha` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/jupyterlite_pyodide_kernel_alpha
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `jupyterlite-pyodide-kernel` can be installed with `conda`:
+Once the `conda-forge/label/jupyterlite_pyodide_kernel_alpha` channel has been enabled, `jupyterlite-pyodide-kernel` can be installed with `conda`:
 
 ```
 conda install jupyterlite-pyodide-kernel
@@ -56,26 +56,26 @@ mamba install jupyterlite-pyodide-kernel
 It is possible to list all of the versions of `jupyterlite-pyodide-kernel` available on your platform with `conda`:
 
 ```
-conda search jupyterlite-pyodide-kernel --channel conda-forge
+conda search jupyterlite-pyodide-kernel --channel conda-forge/label/jupyterlite_pyodide_kernel_alpha
 ```
 
 or with `mamba`:
 
 ```
-mamba search jupyterlite-pyodide-kernel --channel conda-forge
+mamba search jupyterlite-pyodide-kernel --channel conda-forge/label/jupyterlite_pyodide_kernel_alpha
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search jupyterlite-pyodide-kernel --channel conda-forge
+mamba repoquery search jupyterlite-pyodide-kernel --channel conda-forge/label/jupyterlite_pyodide_kernel_alpha
 
 # List packages depending on `jupyterlite-pyodide-kernel`:
-mamba repoquery whoneeds jupyterlite-pyodide-kernel --channel conda-forge
+mamba repoquery whoneeds jupyterlite-pyodide-kernel --channel conda-forge/label/jupyterlite_pyodide_kernel_alpha
 
 # List dependencies of `jupyterlite-pyodide-kernel`:
-mamba repoquery depends jupyterlite-pyodide-kernel --channel conda-forge
+mamba repoquery depends jupyterlite-pyodide-kernel --channel conda-forge/label/jupyterlite_pyodide_kernel_alpha
 ```
 
 
@@ -97,7 +97,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
