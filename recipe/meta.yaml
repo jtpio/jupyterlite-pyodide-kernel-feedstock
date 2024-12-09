@@ -1,8 +1,9 @@
-{% set version = "0.4.4" %}
+{% set version = "0.4.5" %}
 
 {% set python_min = python_min | default("3.9") %}
+
 {% set js_version = version.replace("a", "-alpha.").replace("b", "-beta.").replace("rc", "-rc.") %}
-{% set jupyterlab_version = ">=4.2.5,<4.3.0" %}
+{% set jupyterlab_version = ">=4.2.6,<4.3.0" %}
 
 package:
   name: jupyterlite-pyodide-kernel
@@ -10,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jupyterlite-pyodide-kernel/jupyterlite_pyodide_kernel-{{ version }}.tar.gz
-  sha256: 802b12afec252f78362773d55f2a236592a6d0c8c1a54f1d059c42f5760ef6fb
+  sha256: 67a2fa59e8186fb272fe58a986943531501963b469dcbd963553bdb5d9e0a0f6
 
 build:
   noarch: python
@@ -26,7 +27,7 @@ requirements:
     - pip
     - python {{ python_min }}
   run:
-    - jupyterlite-core >=0.4.0,<0.5.0
+    - jupyterlite-core >=0.4.5,<0.5.0
     - pkginfo
     - python >={{ python_min }}
 
