@@ -1,10 +1,10 @@
-{% set jupyterlab_version = ">=4.2.6,<4.3.0" %}
 {% set version = "0.4.6" %}
 
 {% set python_min = python_min | default("3.9") %}
 
 {% set js_version = version.replace("a", "-alpha.").replace("b", "-beta.").replace("rc", "-rc.") %}
-{% set jupyterlab_version = ">=4.2.6,<4.3.0" %}
+# the if prevents bot duplicates
+{% if 1 %}{% set jupyterlab_version = ">=4.2.6,<4.3.0" %}{% endif %}
 
 package:
   name: jupyterlite-pyodide-kernel
