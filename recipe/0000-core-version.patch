@@ -1,0 +1,13 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index 6d7feba..213f3f4 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -37,7 +37,7 @@ classifiers = [
+     "Programming Language :: Python :: 3.12",
+ ]
+ dependencies = [
+-    "jupyterlite-core >=0.4.0,<0.5.0",
++    "jupyterlite-core >=0.5.0a0,<0.6.0",
+     "pkginfo"
+ ]
+ 
