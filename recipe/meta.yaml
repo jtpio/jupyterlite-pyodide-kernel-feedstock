@@ -1,4 +1,4 @@
-{% set version = "0.4.6" %}
+{% set version = "0.4.7" %}
 
 {% set python_min = python_min | default("3.9") %}
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jupyterlite-pyodide-kernel/jupyterlite_pyodide_kernel-{{ version }}.tar.gz
-  sha256: 412a322f2951abaa396ac8caadb5f1ce37685f016b3db93c1cbacce9bb06e165
+  sha256: 6e196c1fbbd54cbecbb6eea1a73b927bb84cbf49457eb9c378a52fc323182eb4
 
 build:
   noarch: python
