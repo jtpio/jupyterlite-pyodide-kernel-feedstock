@@ -1,10 +1,10 @@
-{% set version = "0.4.7" %}
+{% set version = "0.5.0" %}
 
-{% set python_min = python_min | default("3.9") %}
-
-{% set js_version = version.replace("a", "-alpha.").replace("b", "-beta.").replace("rc", "-rc.") %}
 # the if prevents bot duplicates
-{% if 1 %}{% set jupyterlab_version = ">=4.2.6,<4.3.0" %}{% endif %}
+{% if 1 %}
+  {% set js_version = version.replace("a", "-alpha.").replace("b", "-beta.").replace("rc", "-rc.") %}
+  {% set jupyterlab_version = ">=4.3.4,<4.4.0" %}
+{% endif %}
 
 package:
   name: jupyterlite-pyodide-kernel
@@ -12,12 +12,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jupyterlite-pyodide-kernel/jupyterlite_pyodide_kernel-{{ version }}.tar.gz
-  sha256: 6e196c1fbbd54cbecbb6eea1a73b927bb84cbf49457eb9c378a52fc323182eb4
+  sha256: 788a29e3af2f200f97a3a9b925da78aa9e4bd81d26de01f284dd5a48ec39e8ea
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   number: 0
+  noarch: python
+  script:
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   entry_points:
     - jupyter-piplite = jupyterlite_pyodide_kernel.app:main
 
@@ -28,7 +29,7 @@ requirements:
     - pip
     - python {{ python_min }}
   run:
-    - jupyterlite-core >=0.4.5,<0.5.0
+    - jupyterlite-core >=0.5.0,<0.6.0
     - pkginfo
     - python >={{ python_min }}
 
