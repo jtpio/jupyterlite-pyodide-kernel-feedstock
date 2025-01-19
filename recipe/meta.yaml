@@ -1,4 +1,4 @@
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 # the if prevents bot duplicates
 {% if 1 %}
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jupyterlite-pyodide-kernel/jupyterlite_pyodide_kernel-{{ version }}.tar.gz
-  sha256: e222260b1a02615441916acff35e4fb60871a536d5d54dcbd85d50cb76bdfab8
+  sha256: c6c2c1bb685fb0a076cbf81cd2460cd9acfd764f91325a67194f79c49f9546a2
 
 build:
   number: 0
