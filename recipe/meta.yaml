@@ -1,4 +1,4 @@
-{% set version = "0.6.0a1" %}
+{% set version = "0.6.0a2" %}
 
 {% set js_version = version.replace("a", "-alpha.").replace("b", "-beta.").replace("rc", "-rc.") %}
 
@@ -13,7 +13,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jupyterlite-pyodide-kernel/jupyterlite_pyodide_kernel-{{ version }}.tar.gz
-  sha256: 487102ef15bf670e1ff51862257b3397ffb6c8f38f23d6dcaf6f58a225e3cc32
+  sha256: c14b7ac5e3ab6f4998f0a96ce589644098e2e8f852f4806a30dcd28d749d7704
 
 build:
   number: 0
