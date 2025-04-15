@@ -1,11 +1,11 @@
-{% set version = "0.6.0a4" %}
+{% set version = "0.6.0a5" %}
 
 {% set js_version = version.replace("a", "-alpha.").replace("b", "-beta.").replace("rc", "-rc.") %}
 
 # the if prevents bot duplicates
 {% if 1 %}
-  {% set jupyterlab_version = ">=4.4.0b1,<4.5.0a0" %}
-  {% set jupyterlite_core_version = ">=0.6.0a3,<0.7.0" %}
+  {% set jupyterlab_version = ">=4.4.0,<4.5.0a0" %}
+  {% set jupyterlite_core_version = ">=0.6.0a8,<0.7.0" %}
 {% endif %}
 
 package:
@@ -14,7 +14,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jupyterlite-pyodide-kernel/jupyterlite_pyodide_kernel-{{ version }}.tar.gz
-  sha256: 085dd2199eb09daec6267d1387bc843da5c9e6d0ff20e59d4af436bb2c57d255
+  sha256: 5fe5ecef5060a9018bc6f1416079826b863c05bcebc2968d4530186e96a7af72
 
 build:
   number: 0
