@@ -9,7 +9,7 @@ Package license: BSD-3-Clause
 
 Summary: Python kernel for JupyterLite powered by Pyodide
 
-Documentation: https://jupyterlite-pyodide-kernel.rtfd.io
+Documentation: https://jupyterlite-pyodide-kernel.rtfd.io/
 
 Current build status
 ====================
@@ -145,7 +145,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@agriyakhetarpal](https://github.com/agriyakhetarpal/)
 * [@bollwyvl](https://github.com/bollwyvl/)
 * [@jtpio](https://github.com/jtpio/)
 * [@martinRenou](https://github.com/martinRenou/)
